@@ -7,7 +7,6 @@
             from:"Tal",
             text: "Yup that works for me"
         });
-
     });
 
     socket.on('disconnect', function () {
