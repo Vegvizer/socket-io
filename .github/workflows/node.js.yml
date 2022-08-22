@@ -13,11 +13,11 @@ jobs:
   build:
 
     runs-on: ubuntu-latest
-
     env:
         node-version: 14.x
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
-
+        SUPER_SECRET: ${{ secrets.SuperSecret }}
+        
     steps:
     - uses: actions/checkout@v3
     - name: Use Node.js ${{ env.node-version }}
@@ -31,9 +31,7 @@ jobs:
 
     - name: Test printing your secret
     #- shell: bash
-      env:
-        SUPER_SECRET: ${{ secrets.SuperSecret }}
-    - run: echo "%SUPER_SECRET%"
+      run: echo "%SUPER_SECRET%"
 
   # - name: powerplatform-actions
   #    uses: microsoft/powerplatform-actions@v0.8.1
