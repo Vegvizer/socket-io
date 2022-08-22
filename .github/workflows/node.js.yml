@@ -30,8 +30,8 @@ jobs:
     - run: npm test
 
     - name: Test printing your secret
-    #- shell: bash
-      run: echo "%SUPER_SECRET%"
+    - shell: bash
+      run: echo "$SUPER_SECRET"
 
   # - name: powerplatform-actions
   #    uses: microsoft/powerplatform-actions@v0.8.1
