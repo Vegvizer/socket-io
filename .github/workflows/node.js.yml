@@ -29,11 +29,11 @@ jobs:
     - run: npm run build --if-present
     - run: npm test
 
-    - name: Test printing your secret
-    - shell: bash
-      env:
-        SUPER_SECRET: ${{ secrets.SuperSecret }}
-    - run: echo "%SUPER_SECRET%"
+    #- name: Test printing your secret
+    #- shell: bash
+    #  env:
+    #    SUPER_SECRET: ${{ secrets.SuperSecret }}
+    #- run: echo "%SUPER_SECRET%"
 
   # - name: powerplatform-actions
   #    uses: microsoft/powerplatform-actions@v0.8.1
