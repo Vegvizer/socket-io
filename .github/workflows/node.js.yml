@@ -16,7 +16,7 @@ jobs:
     env:
         node-version: 14.x
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
-        SUPER_SECRET: ${{ secrets.SuperSecret }}
+        SUPER_SECRET: ${{ secrets.PASSWORD }}
         
     steps:
     - uses: actions/checkout@v3
